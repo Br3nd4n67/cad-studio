@@ -1,6 +1,6 @@
 # Windows port plan
 
-Status: source audit and implementation plan only, 2026-10-09. No Windows executable, installer, or working GUI exists in this branch. No application code has been changed or tested on Windows.
+Status: first Windows geometry milestone passed, 2026-10-09. See [the repeatable test](../windows/smoke/README.md). No Windows desktop executable, installer, or working GUI exists in this branch. The macOS application source remains unchanged.
 
 Fork: https://github.com/Br3nd4n67/cad-studio
 Upstream inspected: filippofinke/cad-studio at a7c4c477e135340eb1d653e739a1ecdb00d9f4ab.
@@ -62,4 +62,5 @@ Scope the initial target to Windows 11 x64. ARM64 and broader OS compatibility r
 
 - 2026-10-09: Created the personal GitHub fork, copied main only, and inspected the source files listed above at the recorded SHA.
 - 2026-10-09: Added this plan on windows-port-plan. No upstream edits or upstream pull request. No source-code port, dependency installation, agent generation, application build, installer, release or deployment performed.
-- Next concrete task: milestone 1, a disposable Windows geometry proof with recorded dependency versions. Read this record and local CAD_STUDIO_WORK_NOTES.md before continuing.
+- 2026-10-09: Completed milestone 1 on Windows 11 AMD64 with Python 3.12.10 and build123d 0.13.0. Validated solid dimensions/volume, STEP round-trip, STL structure/bounds/volume, 3MF archive/mesh/bounds/units, and simple drawing outputs in normal and space/Unicode paths. Added the fixture, runner and exact package versions under windows/smoke. See its README for limitations and setup observations.
+- Next concrete task: milestone 2, Windows process streaming and owned child-process cleanup. Read this record and local CAD_STUDIO_WORK_NOTES.md before continuing.
